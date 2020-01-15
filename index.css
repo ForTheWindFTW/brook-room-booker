@@ -1,0 +1,176 @@
+* {
+  font-family: Helvetica, Arial, Roboto, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(0, 0%, 90%);
+}
+
+button, input, select {
+  width: 100%;
+  padding: 4px;
+  margin: 5px 0;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 90%);
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px hsl(0, 0%, 70%);
+  cursor: text;
+}
+
+input:focus, select:focus {
+  background-color: white;
+}
+
+button {
+  color: white;
+  background-image: linear-gradient(to bottom, hsl(30, 100%, 60%), hsl(19, 100%, 50%));
+}
+
+button:hover {
+  background-image: linear-gradient(to bottom, hsl(30, 100%, 50%), hsl(19, 100%, 40%));
+}
+
+button:focus, input:focus, select:focus {
+  border: 1px solid black;
+}
+
+#mainWrapper {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#bookedStudents {
+  background-color: hsl(0, 0%, 100%);
+  margin: 12px;
+  display: flex;
+}
+
+#studentListTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  flex: 1 1 auto;
+  box-shadow: 3px 3px 3px hsl(0, 0%, 75%);
+  background-color: hsl(0, 0%, 95%);
+}
+
+.dateHeader {
+  text-align: center;
+}
+
+#addStudent {
+  margin: 48px 0 0;
+  display: flex;
+}
+
+.spacer {
+  flex: 1 0 auto;
+}
+
+#formField {
+  background-color: white;
+  box-shadow: 3px 3px 3px hsl(0, 0%, 75%);
+}
+
+#prevWeekButton, #nextWeekButton, .studentData, #studentSubmit {
+  cursor: pointer;
+}
+
+.studentData {
+  background-color: hsl(30, 60%, 90%);
+  word-break: break-word;
+}
+
+.studentData:hover {
+  background-color: hsl(30, 100%, 80%, 0.5);
+  box-shadow: inset 0 0 1px 1px black;
+}
+
+.studentData::selection {
+  background: none;
+}
+
+#prevWeekButton:active, #nextWeekButton:active, .studentData:active, #studentSubmit:active {
+  background-color: hsl(30, 100%, 80%, 0.75);
+}
+
+tr.studentsRow > td {
+  font-size: 16px;
+}
+
+#studentListTable * {
+  border: 1px solid black;
+}
+
+#studentListTable > tbody > tr > td.bottomBorder {
+  text-align: center;
+}
+
+.addStudentLabel {
+  text-align: right;
+}
+
+#mainFooter {
+  width: 100%;
+  padding: 2px;
+  bottom: 0px;
+  background-color: hsl(0, 0%, 80%);
+  text-align: right;
+  font-size: 12px;
+  position: fixed;
+  box-sizing: border-box;
+}
+
+#sideBar {
+  width: 25%;
+  top: 0px;
+  left: -25%;
+  background-color: hsl(0, 0%, 100%);
+  position: fixed;
+  transition: left 500ms, box-shadow 1000ms;
+}
+
+#sideBarWrapper {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#helpSVG {
+  right: -105px;
+  bottom: 0px;
+  position: absolute;
+  fill: white;
+}
+
+#helpIcon {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.svgPath:hover {
+  fill: hsl(180, 100%, 80%);
+  cursor: pointer;
+}
+
+.helpText {
+  text-indent: 1em;
+}
+
+.full {
+  background-color: hsl(0, 100%, 80%);
+}
+
+.full:hover {
+  cursor: not-allowed;
+  background-color: hsl(0, 100%, 80%);
+}
+
+#today {
+  background-color: hsl(120, 100%, 50%);
+}

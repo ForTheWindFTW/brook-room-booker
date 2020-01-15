@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Resource Room Booker</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div id="mainWrapper">
+    <div id="bookedStudents">
+      <table id="studentListTable">
+        <thead>
+          <td></td>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <td></td>
+        </thead>
+        <tbody>
+          <tr>
+            <td><button id="prevWeekButton">Previous Week</button></td>
+            <td class="dateHeader">DATE</td>
+            <td class="dateHeader">DATE</td>
+            <td class="dateHeader">DATE</td>
+            <td class="dateHeader">DATE</td>
+            <td class="dateHeader">DATE</td>
+            <td><button id="nextWeekButton">Next Week</button></td>
+          </tr>
+          <tr class="studentsRow">
+            <th>Period&#8239;1</th>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <th>Period&#8239;1</th>
+          </tr>
+          <tr class="studentsRow">
+            <th>Period&#8239;2</th>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <th>Period&#8239;2</th>
+          </tr>
+          <tr class="studentsRow">
+            <th>Period&#8239;3</th>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <th>Period&#8239;3</th>
+          </tr>
+          <tr class="studentsRow">
+            <th>Period&#8239;4</th>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <td class="studentData">STUDENT</td>
+            <th>Period&#8239;4</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="addStudent">
+      <div class="spacer"></div>
+      <form action="/" method="get" id="addStudentForm">
+        <fieldset id="formField">
+          <table id="addStudentTable">
+            <thead>
+              <th colspan="3">Add a Student</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="addStudentLabel">Student:</th>
+                <td>
+                  <input type="text" name="studentNameInput" placeholder="full name" required autofocus>
+                </td>
+              </tr>
+              <tr>
+                <th class="addStudentLabel">Teacher:</th>
+                <td>
+                  <input type="text" name="teacherNameInput" placeholder="name" required>
+                </td>
+              </tr>
+              <tr>
+                <th class="addStudentLabel">Course:</th>
+                <td>
+                  <input type="text" name="courseInput" placeholder="code" required>
+                </td>
+              </tr>
+              <tr>
+                <th class="addStudentLabel">Room:</th>
+                <td>
+                  <input type="text" name="roomInput" placeholder="number" required>
+                </td>
+              </tr>
+              <tr>
+                <th class="addStudentLabel">Date:</th>
+                <td><input type="date" name="dateInput" id="studentDateInput" required></td colspan="2">
+              </tr>
+              <tr>
+                <th class="addStudentLabel">Period:</th>
+                <td>
+                  <select name="periodInput" id="studentPeriodInput">
+                    <option hidden disabled selected></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </td colspan="2">
+              </tr>
+              <tr>
+                <td></td>
+                <td><button type="submit" id="studentSubmit">Add Student</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+      <div class="spacer"></div>
+    </div>
+
+    <footer id="mainFooter">
+      Copyright &copy; 2019 Stanley Chow. All Rights Reserved
+    </footer>
+
+    <aside id="sideBar">
+      <div id="sideBarWrapper">
+        <article id="helpBody">
+          Shortcuts:
+          <ul>
+            <li>Ctrl + Left Arrow Key: View Previous Week</li>
+            <li>Ctrl + Right Arrow Key: View Next Week</li>
+            <li>Click Buttons: View Previous or Next Week</li>
+            <li>Ctrl + Click: Toggle Student Details</li>
+          </ul>
+          <p class="helpText">
+            This website will allow teachers to book students who will go to the resource room on certain days at specific times.
+          </p>
+          <p class="helpText">
+            To book a student, type in their name, and either click an orange cell in the table, or enter the date in the form manually.
+          </p>
+        </article>
+        <svg id="helpSVG" width="125" height="100">
+          <defs>
+            <filter id="shadowFilter" x="0" y="0" width="200%" height="200%">
+              <feDropShadow dx="2" dy="2" stdDeviation="2"/>
+            </filter>
+          </defs>
+          <path id="helpIconBackground" class="svgPath" d="M20 0 L50 0 Q100 0 100 50 Q100,100 50 100 L20 100 z" filter="url(#shadowFilter)"/>
+          <path id="helpIcon" class="svgPath" d="M55 20 Q45 20 45 30 L65 50 L45 70 Q45 80 55 80 L80 55 Q85 50 80 45 z"/>
+          SVG is not supported.
+        </svg>
+      </div>
+    </aside>
+  </div>
+</body>
+
+</html>

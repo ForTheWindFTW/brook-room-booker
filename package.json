@@ -1,0 +1,24 @@
+{
+  "name": "brook-room-booker",
+  "version": "1.0.0",
+  "description": "\u0016\u0016A web application which utilizes NodeJS as the server, to book students in a room.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForTheWindFTW/brook-room-booker.git"
+  },
+  "author": "Stanley Chow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ForTheWindFTW/brook-room-booker/issues"
+  },
+  "homepage": "https://github.com/ForTheWindFTW/brook-room-booker#readme",
+  "dependencies": {
+    "mongodb": "^3.3.5",
+    "redis": "^2.8.0"
+  }
+}
